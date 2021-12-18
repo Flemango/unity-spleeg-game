@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Destroy
+    - attack_point
     - autojoin
     - deleting
     - join_server
@@ -16,8 +17,6 @@ ScriptsOnlyBuild:
     - weaponSwitch
     Mirror.Components.dll:
     - Mirror.NetworkTransform
-    Mirror.Editor.dll:
-    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -145,7 +144,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5582}
     - Class: 114
-      Script: {instanceID: 7034}
+      Script: {instanceID: 6074}
+    - Class: 114
+      Script: {instanceID: 7036}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -270,21 +271,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6020}
     - Class: 114
-      Script: {instanceID: 6148}
+      Script: {instanceID: 6150}
     - Class: 114
-      Script: {instanceID: 6250}
+      Script: {instanceID: 6252}
     - Class: 114
-      Script: {instanceID: 6294}
+      Script: {instanceID: 6296}
     - Class: 114
-      Script: {instanceID: 6810}
+      Script: {instanceID: 6812}
     - Class: 114
-      Script: {instanceID: 6854}
+      Script: {instanceID: 6856}
     - Class: 114
-      Script: {instanceID: 7148}
+      Script: {instanceID: 7150}
     - Class: 114
-      Script: {instanceID: 7218}
+      Script: {instanceID: 7220}
     - Class: 114
-      Script: {instanceID: 7382}
+      Script: {instanceID: 7384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -792,7 +793,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 63b01e161b98240c586ae3f22f9d64df
+      Hash: 8033b0753e8324ba3add5aaf9fbc160e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerShooting
@@ -1384,6 +1385,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: DistanceInterestManagementCustomRange
+  - hash:
+      serializedVersion: 2
+      Hash: 3ee2fef118753082bdb03db90e00ab9f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: attack_point
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a

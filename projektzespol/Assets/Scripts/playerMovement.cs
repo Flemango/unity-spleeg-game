@@ -9,6 +9,7 @@ public class playerMovement : NetworkBehaviour
     public float walking_speed = 5f;
     public float strafing_speed = 4f;
     public float horizontal_cam = 0;
+    [SyncVar(hook = "OnChange")]
     public float vertical_cam = 0;
 
     public float forward_move;
@@ -34,6 +35,9 @@ public class playerMovement : NetworkBehaviour
 
     void Update()
     {
+        if(isLocalPlayer) CmdVerticalSync(vertical_cam);
+
+
         if (!hasAuthority) return;
         horizontal_cam = Input.GetAxis("Mouse X");
         vertical_cam -= Input.GetAxis("Mouse Y");
@@ -59,5 +63,14 @@ public class playerMovement : NetworkBehaviour
         Vector3 player_move = new Vector3(side_move, vertical_move, forward_move);
 
         cc.Move(transform.rotation * player_move * Time.deltaTime);
+    }
+    [Command]
+    public void CmdVerticalSync(float value)
+    {
+        vertical_cam = value;
+    }
+    void OnChange(float old,float value)
+    {
+        vertical_cam = value;
     }
 }
