@@ -47,24 +47,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\starter.cs" />
-     <Compile Include="Assets\join_server.cs" />
-     <Compile Include="Assets\star_game.cs" />
+     <Compile Include="Assets\Scripts\starter.cs" />
+     <Compile Include="Assets\Scripts\join_server.cs" />
+     <Compile Include="Assets\Scripts\star_game.cs" />
      <Compile Include="Assets\Scripts\grid.cs" />
-     <Compile Include="Assets\player_test.cs" />
+     <Compile Include="Assets\Scripts\player_test.cs" />
      <Compile Include="Assets\Scripts\playerShooting.cs" />
-     <Compile Include="Assets\autojoin.cs" />
+     <Compile Include="Assets\Scripts\autojoin.cs" />
      <Compile Include="Assets\Scripts\playerMovement.cs" />
-     <Compile Include="Assets\Destroy.cs" />
+     <Compile Include="Assets\Scripts\Destroy.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
-     <Compile Include="Assets\deleting.cs" />
+     <Compile Include="Assets\Scripts\deleting.cs" />
      <Compile Include="Assets\Scripts\weaponSwitch.cs" />
      <Compile Include="Assets\Scripts\weaponSway.cs" />
-     <Compile Include="Assets\testing.cs" />
-     <Compile Include="Assets\attack_point.cs" />
-     <Compile Include="Assets\network_set.cs" />
-     <Compile Include="Assets\servers.cs" />
-     <Compile Include="Assets\test.cs" />
+     <Compile Include="Assets\Scripts\testing.cs" />
+     <Compile Include="Assets\Scripts\attack_point.cs" />
+     <Compile Include="Assets\Scripts\servers.cs" />
+     <Compile Include="Assets\Scripts\test.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
      <None Include="Assets\Mirror\Version.txt" />

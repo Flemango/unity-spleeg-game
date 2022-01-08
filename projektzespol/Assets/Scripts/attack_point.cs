@@ -37,7 +37,7 @@ public class attack_point : MonoBehaviour
         else transform.localPosition = new Vector3(transform.localPosition.x, 0+Mathf.Cos(tmp*Mathf.Deg2Rad)/2, 0);
 
         //Debug.Log(tmp);
-        Debug.Log(transform.localPosition);
+        //Debug.Log(transform.localPosition);
         /*
         if (tmp == 90) transform.localPosition = new Vector3(0, 0, 0);
         else if(tmp== -90) transform.localPosition = new Vector3(0, 1, 0);*/

@@ -5,6 +5,7 @@ using Mirror;
 using UnityEngine.SceneManagement;
 using System;
 using System.IO;
+using UnityEngine.UI;
 
 public class autojoin : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class autojoin : MonoBehaviour
     public string IP;
     //[SerializeField] NetworkManager networkManager;
     [SerializeField] CanvasGroup canvas;
-
+    
     void Start()
     {
         
@@ -28,13 +29,15 @@ public class autojoin : MonoBehaviour
             canvas.alpha = 0;
             // networkManager.networkAddress = IP;
             // networkManager.StartClient();
-            using (StreamWriter writer = new StreamWriter(@"C:\Temp\mode.txt"))
+            using (StreamWriter writer = new StreamWriter(@"mode.txt"))
             {
                 writer.WriteLine("client");
                 writer.WriteLine(IP);
             }
             Debug.Log("Joining " + IP);
             Debug.Log("Trying to load a new scene");
+            
+            
             SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
         }
         else

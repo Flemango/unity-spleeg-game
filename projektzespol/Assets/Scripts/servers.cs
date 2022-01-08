@@ -16,6 +16,7 @@ public class servers : MonoBehaviour
     public Transform panel2;
     [SerializeField] InputField server_name;
     [SerializeField] InputField server_IP;
+    [SerializeField] InputField player_name;
 
     
 
@@ -41,7 +42,15 @@ public class servers : MonoBehaviour
             Debug.Log(child.GetComponentInChildren<Text>().text);
             child.GetComponentInChildren<join_server>().get_name();*/
         }
-        using (StreamReader reader = new StreamReader(@"C:\Temp\test.txt"))
+        if (!File.Exists(@"test.txt"))
+        {
+            using (StreamWriter writer = new StreamWriter(@"test.txt"))
+            {
+                writer.WriteLine("local");
+                writer.WriteLine("localhost");
+            }
+        }
+        using (StreamReader reader = new StreamReader(@"test.txt"))
         {
             string line1;
             string line2;
@@ -58,17 +67,28 @@ public class servers : MonoBehaviour
 
     void Start()
     {
+
+
+
+        if (!File.Exists(@"player_name.txt"))
+        {
+            using (StreamWriter writer = new StreamWriter(@"player_name.txt"))
+            {
+                writer.WriteLine("Player name");
+            }
+        }
+        
+        using (StreamReader reader = new StreamReader(@"player_name.txt"))
+        {
+           player_name.text= reader.ReadLine();
+        }
+
         
 
 
 
-
-
-
-
-
-        //string readText = File.ReadAllText(@"C:\Temp\test.txt");
-        //string[] lines = readText.Split(Environment.NewLine);
+        //string path = Directory.GetCurrentDirectory();
+        // Debug.Log(path);
 
         update_list();
         
@@ -76,8 +96,7 @@ public class servers : MonoBehaviour
 
         
 
-        /*GameObject go = Instantiate(button);
-        go.transform.SetParent(panel.transform, false);*/
+        
 
     }
 
@@ -87,8 +106,8 @@ public class servers : MonoBehaviour
         go.transform.SetParent(panel.transform, false);
         go.GetComponentInChildren<Text>().text = server_name.text;
         go.GetComponentInChildren<join_server>().IP = server_IP.text;
-        string readText = File.ReadAllText(@"C:\Temp\test.txt");
-        using (StreamWriter writer = new StreamWriter(@"C:\Temp\test.txt"))
+        string readText = File.ReadAllText(@"test.txt");
+        using (StreamWriter writer = new StreamWriter(@"test.txt"))
         {
             writer.Write(readText);
             writer.WriteLine(server_name.text);
@@ -117,7 +136,7 @@ public class servers : MonoBehaviour
             Debug.Log(child.GetComponentInChildren<Text>().text);
             child.GetComponentInChildren<join_server>().get_name();*/
         }
-        using (StreamWriter writer = new StreamWriter(@"C:\Temp\test.txt"))
+        using (StreamWriter writer = new StreamWriter(@"test.txt"))
         {
             writer.Write("");
         }

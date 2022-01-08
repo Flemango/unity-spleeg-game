@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System;
+using System.IO;
 
 [RequireComponent(typeof(CharacterController))]
 public class playerMovement : NetworkBehaviour
@@ -20,6 +22,47 @@ public class playerMovement : NetworkBehaviour
     float mouse_sens=1.5f;
 
     CharacterController cc;
+
+
+    public TextMesh playerNameText;
+    public GameObject floatingInfo;
+    [SyncVar(hook = nameof(OnNameChanged))]
+    public string playerName;
+    void OnNameChanged(string _Old, string _New)
+    {
+        playerNameText.text = playerName;
+    }
+
+
+    public override void OnStartLocalPlayer()
+    {
+        string name;
+
+        if (File.Exists(@"player_name.txt"))
+        {
+            using (StreamReader reader = new StreamReader(@"player_name.txt"))
+            {
+                name = reader.ReadLine();
+            }
+        }
+        else name = "Player" + UnityEngine.Random.Range(1, 1000);
+
+
+
+
+
+
+        CmdSetupPlayer(name);
+    }
+    [Command]
+    public void CmdSetupPlayer(string _name)
+    {
+        // player info sent to server, then server updates sync vars which handles it on all clients
+        playerName = _name;
+        
+    }
+
+
     public override void OnStartAuthority()
     {
         Camera.main.transform.SetParent(transform);
@@ -35,7 +78,15 @@ public class playerMovement : NetworkBehaviour
 
     void Update()
     {
-        if(isLocalPlayer) CmdVerticalSync(vertical_cam);
+        if (!isLocalPlayer)
+        {
+            // make non-local players run this
+            floatingInfo.transform.LookAt(Camera.main.transform);
+            return;
+        }
+
+
+        if (isLocalPlayer) CmdVerticalSync(vertical_cam);
 
 
         if (!hasAuthority) return;

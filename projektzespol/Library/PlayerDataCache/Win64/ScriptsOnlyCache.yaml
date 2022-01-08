@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Destroy
+    - apply_name
     - attack_point
     - autojoin
     - deleting
@@ -146,7 +147,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6074}
     - Class: 114
-      Script: {instanceID: 7036}
+      Script: {instanceID: 7034}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -277,15 +278,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6296}
     - Class: 114
-      Script: {instanceID: 6812}
+      Script: {instanceID: 6810}
     - Class: 114
-      Script: {instanceID: 6856}
+      Script: {instanceID: 6854}
     - Class: 114
-      Script: {instanceID: 7150}
+      Script: {instanceID: 7148}
     - Class: 114
-      Script: {instanceID: 7220}
+      Script: {instanceID: 7218}
     - Class: 114
-      Script: {instanceID: 7384}
+      Script: {instanceID: 7382}
+    - Class: 114
+      Script: {instanceID: 50130}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -991,7 +994,7 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: 98e5c54669577030ce18eba369e67fc1
+      Hash: 1372bbb75264a012b6b7539c86c2bdad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerMovement
@@ -1531,7 +1534,7 @@ ScriptsOnlyBuild:
     className: UniversalAdditionalLightData
   - hash:
       serializedVersion: 2
-      Hash: c8babcc58ec57c6bcec1d441b050e209
+      Hash: dfd40311703a93ae9647234a39f3b319
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: servers
@@ -1691,6 +1694,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 502db73201e47b99b8bcf21600fd99f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: apply_name
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

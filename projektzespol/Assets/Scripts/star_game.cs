@@ -11,7 +11,7 @@ public class star_game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        using (StreamReader reader = new StreamReader(@"C:\Temp\mode.txt"))
+        using (StreamReader reader = new StreamReader(@"mode.txt"))
         {
             string line;
             while ((line = reader.ReadLine()) != null)

@@ -14,6 +14,7 @@ public class join_server : MonoBehaviour
     GameObject delete;
     public GameObject connector;
     public string IP;
+    
 
     public void change_IP()
     {
@@ -25,13 +26,15 @@ public class join_server : MonoBehaviour
             connector.GetComponentInChildren<autojoin>().IP = IP;
             connector.GetComponentInChildren<autojoin>().JoinLocal();
             Debug.Log("ip_false");
+            
+            
         }
         else
         {
             Debug.Log("ip_true");
             string name = button.GetComponentInChildren<Text>().text;
             string readText="";
-            using (StreamReader reader = new StreamReader(@"C:\Temp\test.txt"))
+            using (StreamReader reader = new StreamReader(@"test.txt"))
             {
                 string line1;
                 string line2;
@@ -46,7 +49,7 @@ public class join_server : MonoBehaviour
                     
                 }
             }
-            using (StreamWriter writer = new StreamWriter(@"C:\Temp\test.txt"))
+            using (StreamWriter writer = new StreamWriter(@"test.txt"))
             {
                 writer.Write(readText);
             }
