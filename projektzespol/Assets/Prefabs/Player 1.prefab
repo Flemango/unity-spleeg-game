@@ -101,10 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  w_switch: {fileID: 0}
   walking_speed: 5
   strafing_speed: 2.5
   horizontal_cam: 0
   vertical_cam: 0
+  weapon_select: 0
   forward_move: 0
   side_move: 0
   vertical_move: 0
@@ -126,11 +128,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  tmp: 0
   projectile: {fileID: 5939287584556023081, guid: 0f89c7f423f04e74e93ffcc2237b60df, type: 3}
   projectile2: {fileID: 5248945401449490204, guid: 196ab5f84189e994e94706d8923d725e, type: 3}
-  w_switch: {fileID: 0}
   player: {fileID: 0}
   player2: {fileID: 536645145558804774}
+  player_check: {fileID: 536645145558804825}
   shoot_f: 20
   upward_f: 5
   shoot_cd: 0.15

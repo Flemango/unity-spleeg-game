@@ -8,11 +8,16 @@ using System.IO;
 [RequireComponent(typeof(CharacterController))]
 public class playerMovement : NetworkBehaviour
 {
+    public weaponSwitch w_switch;
+
     public float walking_speed = 5f;
     public float strafing_speed = 4f;
     public float horizontal_cam = 0;
     [SyncVar(hook = "OnChange")]
     public float vertical_cam = 0;
+
+    [SyncVar(hook = "OnWeaponChange")]
+    public int weapon_select;
 
     public float forward_move;
     public float side_move;
@@ -47,7 +52,7 @@ public class playerMovement : NetworkBehaviour
         }
         else name = "Player" + UnityEngine.Random.Range(1, 1000);
 
-
+        w_switch = FindObjectOfType<weaponSwitch>();
 
 
 
@@ -86,7 +91,12 @@ public class playerMovement : NetworkBehaviour
         }
 
 
-        if (isLocalPlayer) CmdVerticalSync(vertical_cam);
+        if (isLocalPlayer)
+        { 
+            CmdVerticalSync(vertical_cam);
+            weapon_select = w_switch.weapon_select;
+            CmdWeaponSync(weapon_select);
+        }
 
 
         if (!hasAuthority) return;
@@ -123,5 +133,14 @@ public class playerMovement : NetworkBehaviour
     void OnChange(float old,float value)
     {
         vertical_cam = value;
+    }
+    [Command]
+    public void CmdWeaponSync(int value)
+    {
+        weapon_select = value;
+    }
+    void OnWeaponChange(int old, int value)
+    {
+        weapon_select = value;
     }
 }

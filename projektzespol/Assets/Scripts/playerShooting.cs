@@ -4,12 +4,13 @@ using UnityEngine;
 using Mirror;
 public class playerShooting : NetworkBehaviour
 {
+    public int tmp;
     public GameObject projectile;
     public GameObject projectile2;
-    public weaponSwitch w_switch;
+    //public weaponSwitch w_switch;
     public playerShooting player;
     public Transform player2;
-    
+    public GameObject player_check;
 
     public float shoot_f, upward_f, shoot_cd, cd_timer;
     public GameObject attack;
@@ -21,7 +22,7 @@ public class playerShooting : NetworkBehaviour
 
     void Start()
     {
-        w_switch = FindObjectOfType<weaponSwitch>();
+        //w_switch = FindObjectOfType<weaponSwitch>();
         cam = FindObjectOfType<Camera>();
     }
     
@@ -53,24 +54,20 @@ public class playerShooting : NetworkBehaviour
 
     void Bazooka()
     {
-        GameObject tmp = Instantiate(projectile2, attack_point.position, attack_point.rotation);
+        if (!hasAuthority) return;
+        NetworkIdentity netId = NetworkClient.connection.identity;
+        player = netId.GetComponent<playerShooting>();
+        if (isServer)
+        {
+            RpcShoot_Bazooka();
+        }
+        else
+        {
+            CmdShoot_Bazooka();
+        }
 
-        float y_value;
-        y_value=attack.GetComponentInChildren<attack_point>().tmp;
+
         
-        float x_value;
-        float z_value;
-        x_value = Mathf.Cos(y_value * Mathf.Deg2Rad)*tmp.transform.forward.x;
-        z_value = Mathf.Cos(y_value * Mathf.Deg2Rad)*tmp.transform.forward.z;
-
-
-        if (y_value <= 0) y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
-        else y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
-
-        direction = new Vector3(x_value,y_value,z_value);
-        tmp.GetComponent<Rigidbody>().velocity = direction*15;
-        tmp.GetComponent<Rigidbody>().useGravity = false;
-        Debug.Log(direction);
     }
 
     void Update()
@@ -82,9 +79,12 @@ public class playerShooting : NetworkBehaviour
         if (cd_timer<0)
             cd_timer=0;
 
-        if(Input.GetButton("Fire1") && cd_timer==0)
+
+        tmp = player_check.GetComponentInChildren<playerMovement>().weapon_select;
+
+        if (Input.GetButton("Fire1") && cd_timer==0)
         {
-            if (w_switch.weapon_select==0)
+            if (tmp==0)
             {
                 GunShoot();
                 cd_timer=shoot_cd;
@@ -136,5 +136,32 @@ public class playerShooting : NetworkBehaviour
         //tmp.GetComponent<Rigidbody>().AddForce(direction * shoot_f*5, ForceMode.Impulse);
         //tmp.GetComponent<Rigidbody>().AddForce(direction * upward_f*5, ForceMode.Impulse);
         
+    }
+    [Command]
+    public void CmdShoot_Bazooka()
+    {
+        RpcShoot_Bazooka();
+    }
+    [ClientRpc]
+    public void RpcShoot_Bazooka()
+    {
+        GameObject tmp = Instantiate(projectile2, attack_point.position, attack_point.rotation);
+
+        float y_value;
+        y_value = attack.GetComponentInChildren<attack_point>().tmp;
+
+        float x_value;
+        float z_value;
+        x_value = Mathf.Cos(y_value * Mathf.Deg2Rad) * tmp.transform.forward.x;
+        z_value = Mathf.Cos(y_value * Mathf.Deg2Rad) * tmp.transform.forward.z;
+
+
+        if (y_value <= 0) y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
+        else y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
+
+        direction = new Vector3(x_value, y_value, z_value);
+        tmp.GetComponent<Rigidbody>().velocity = direction * 15;
+        tmp.GetComponent<Rigidbody>().useGravity = false;
+        Debug.Log(direction);
     }
 }

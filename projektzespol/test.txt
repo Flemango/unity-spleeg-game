@@ -1,4 +1,2 @@
 local
 localhost
-local1
-localhost

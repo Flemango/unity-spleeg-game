@@ -1,15 +1,17 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Destroy
     - apply_name
     - attack_point
     - autojoin
     - deleting
+    - explosion
+    - grid
     - join_server
     - playerMovement
     - playerShooting
     - projectile
+    - projectile2
     - servers
     - star_game
     - starter
@@ -121,33 +123,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2098}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3102}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3940}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 4196}
+      Script: {instanceID: 3942}
     - Class: 114
-      Script: {instanceID: 4646}
+      Script: {instanceID: 4198}
     - Class: 114
-      Script: {instanceID: 4692}
+      Script: {instanceID: 4648}
     - Class: 114
-      Script: {instanceID: 4776}
+      Script: {instanceID: 4694}
     - Class: 114
-      Script: {instanceID: 4926}
+      Script: {instanceID: 4928}
     - Class: 114
-      Script: {instanceID: 5480}
+      Script: {instanceID: 5342}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 5582}
+      Script: {instanceID: 5490}
     - Class: 114
-      Script: {instanceID: 6074}
+      Script: {instanceID: 5586}
     - Class: 114
-      Script: {instanceID: 7034}
+      Script: {instanceID: 6078}
+    - Class: 114
+      Script: {instanceID: 7038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,6 +163,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -202,93 +210,93 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1734}
     - Class: 114
-      Script: {instanceID: 2278}
+      Script: {instanceID: 2280}
     - Class: 114
-      Script: {instanceID: 2366}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2396}
+      Script: {instanceID: 2398}
     - Class: 114
-      Script: {instanceID: 2560}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 2804}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 3026}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3184}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3234}
+      Script: {instanceID: 3236}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3354}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 3756}
+      Script: {instanceID: 3758}
     - Class: 114
-      Script: {instanceID: 3858}
+      Script: {instanceID: 3860}
     - Class: 114
-      Script: {instanceID: 4126}
+      Script: {instanceID: 4128}
     - Class: 114
-      Script: {instanceID: 4242}
+      Script: {instanceID: 4244}
     - Class: 114
-      Script: {instanceID: 4850}
+      Script: {instanceID: 4852}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 4868}
     - Class: 114
-      Script: {instanceID: 4930}
-    - Class: 114
-      Script: {instanceID: 5112}
+      Script: {instanceID: 4932}
     - Class: 114
       Script: {instanceID: 5114}
     - Class: 114
-      Script: {instanceID: 5132}
+      Script: {instanceID: 5116}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 5134}
     - Class: 114
-      Script: {instanceID: 5460}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5480}
+      Script: {instanceID: 5464}
     - Class: 114
-      Script: {instanceID: 5598}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 5676}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 5682}
+      Script: {instanceID: 5680}
     - Class: 114
-      Script: {instanceID: 5772}
+      Script: {instanceID: 5686}
     - Class: 114
-      Script: {instanceID: 5806}
+      Script: {instanceID: 5776}
     - Class: 114
-      Script: {instanceID: 5848}
+      Script: {instanceID: 5810}
     - Class: 114
-      Script: {instanceID: 5914}
+      Script: {instanceID: 5852}
     - Class: 114
-      Script: {instanceID: 5924}
+      Script: {instanceID: 5918}
     - Class: 114
-      Script: {instanceID: 6020}
+      Script: {instanceID: 5928}
     - Class: 114
-      Script: {instanceID: 6150}
+      Script: {instanceID: 6024}
     - Class: 114
-      Script: {instanceID: 6252}
+      Script: {instanceID: 6154}
     - Class: 114
-      Script: {instanceID: 6296}
+      Script: {instanceID: 6256}
     - Class: 114
-      Script: {instanceID: 6810}
+      Script: {instanceID: 6300}
     - Class: 114
-      Script: {instanceID: 6854}
+      Script: {instanceID: 6814}
     - Class: 114
-      Script: {instanceID: 7148}
+      Script: {instanceID: 6858}
     - Class: 114
-      Script: {instanceID: 7218}
+      Script: {instanceID: 7152}
     - Class: 114
-      Script: {instanceID: 7382}
+      Script: {instanceID: 7222}
     - Class: 114
-      Script: {instanceID: 50130}
+      Script: {instanceID: 7354}
+    - Class: 114
+      Script: {instanceID: 7388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -434,6 +442,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Experimental.Rendering.Universal
     className: RenderObjects
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: explosion
   - hash:
       serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
@@ -796,7 +810,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 8033b0753e8324ba3add5aaf9fbc160e
+      Hash: d001f49f53c71107f2c445b42e230276
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerShooting
@@ -994,7 +1008,7 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: 1372bbb75264a012b6b7539c86c2bdad
+      Hash: f437ee602eb3c5b95d5711c92125996a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerMovement
@@ -1172,6 +1186,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering
     className: VolumeComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 2694f83550d3177457df46bd54e44326
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: projectile2
   - hash:
       serializedVersion: 2
       Hash: 3fe74dd3b211760c4ed03510eafabc55
@@ -1660,6 +1680,12 @@ ScriptsOnlyBuild:
     className: Volume
   - hash:
       serializedVersion: 2
+      Hash: 502db73201e47b99b8bcf21600fd99f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: apply_name
+  - hash:
+      serializedVersion: 2
       Hash: 36025d42bf23fda83a55bf1429201821
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -1694,12 +1720,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 502db73201e47b99b8bcf21600fd99f4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: apply_name
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
