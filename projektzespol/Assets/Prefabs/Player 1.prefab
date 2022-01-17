@@ -127,6 +127,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   projectile: {fileID: 5939287584556023081, guid: 0f89c7f423f04e74e93ffcc2237b60df, type: 3}
+  projectile2: {fileID: 5248945401449490204, guid: 196ab5f84189e994e94706d8923d725e, type: 3}
   w_switch: {fileID: 0}
   player: {fileID: 0}
   player2: {fileID: 536645145558804774}

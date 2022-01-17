@@ -5,6 +5,7 @@ using Mirror;
 public class playerShooting : NetworkBehaviour
 {
     public GameObject projectile;
+    public GameObject projectile2;
     public weaponSwitch w_switch;
     public playerShooting player;
     public Transform player2;
@@ -15,7 +16,8 @@ public class playerShooting : NetworkBehaviour
     public Camera cam;
     public Transform attack_point;
     Vector3 target_point, direction;
-    Ray ray;
+    //Ray ray;
+    bool bazooka_used=false;
 
     void Start()
     {
@@ -51,7 +53,24 @@ public class playerShooting : NetworkBehaviour
 
     void Bazooka()
     {
+        GameObject tmp = Instantiate(projectile2, attack_point.position, attack_point.rotation);
 
+        float y_value;
+        y_value=attack.GetComponentInChildren<attack_point>().tmp;
+        
+        float x_value;
+        float z_value;
+        x_value = Mathf.Cos(y_value * Mathf.Deg2Rad)*tmp.transform.forward.x;
+        z_value = Mathf.Cos(y_value * Mathf.Deg2Rad)*tmp.transform.forward.z;
+
+
+        if (y_value <= 0) y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
+        else y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
+
+        direction = new Vector3(x_value,y_value,z_value);
+        tmp.GetComponent<Rigidbody>().velocity = direction*15;
+        tmp.GetComponent<Rigidbody>().useGravity = false;
+        Debug.Log(direction);
     }
 
     void Update()
@@ -71,9 +90,12 @@ public class playerShooting : NetworkBehaviour
                 cd_timer=shoot_cd;
             }
             else {
-                Bazooka();
+                if (bazooka_used==false)
+                {
+                    Bazooka();
+                    bazooka_used=true;
+                }
             }
-            
         } 
     }
     [Command]
@@ -107,13 +129,9 @@ public class playerShooting : NetworkBehaviour
 
         if (y_value <= 0) y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
         else y_value = Mathf.Sin(y_value * Mathf.Deg2Rad) * -1;
-       // float multi = 1;
-       // if (Mathf.Abs(y_value) >= 45) multi = .5f;
-        //if (Mathf.Abs(y_value) >= 90) multi = .25f;
 
-        
         direction = new Vector3(x_value,y_value,z_value);
-        tmp.GetComponent<Rigidbody>().velocity = direction*10;
+        tmp.GetComponent<Rigidbody>().velocity = direction*30;
         Debug.Log(direction);
         //tmp.GetComponent<Rigidbody>().AddForce(direction * shoot_f*5, ForceMode.Impulse);
         //tmp.GetComponent<Rigidbody>().AddForce(direction * upward_f*5, ForceMode.Impulse);
