@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637780149460000000
-    m_Hash: 2588426945
+      ticks: 637781187431189224
+    m_Hash: 1774541716
   m_LockFileStatus:
     m_FilePath: C:/Users/konra/OneDrive/Documents/GitHub/Spleeg/projektzespol/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637780149460000000
-    m_Hash: 1637223226
+      ticks: 637781187431189224
+    m_Hash: 2343615570
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

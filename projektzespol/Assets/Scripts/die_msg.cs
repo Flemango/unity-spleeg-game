@@ -12,5 +12,9 @@ public class die_msg : MonoBehaviour
     {
         if(transform.position.y<-50)
             text_elem.text="You lost";
+
+        if (Input.GetKey ("escape")) {
+                 Application.Quit();
+                }
     }
 }

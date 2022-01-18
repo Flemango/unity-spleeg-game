@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9a8d535d5293b47a67b57018d083e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0.1
+  amount: 0.03
   smooth_amount: 6
 --- !u!1 &702209726
 GameObject:
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9a8d535d5293b47a67b57018d083e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0.1
+  amount: 0.05
   smooth_amount: 6
 --- !u!1 &1821561107
 GameObject:

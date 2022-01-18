@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 709, y: 471}
-  m_MaxSize: {x: 18004, y: 14021}
+  m_MinSize: {x: 708, y: 471}
+  m_MaxSize: {x: 18003, y: 14021}
   vertical: 0
-  controlID: 3844
+  controlID: 33810
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,10 +145,10 @@ MonoBehaviour:
     y: 0
     width: 576
     height: 947
-  m_MinSize: {x: 231, y: 471}
-  m_MaxSize: {x: 10001, y: 14021}
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 3796
+  controlID: 33698
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 3845
+  controlID: 33811
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -432,22 +432,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\konra\OneDrive\Documents\GitHub\Spleeg\projektzespol
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7aa60000
-    m_LastClickedID: 42618
-    m_ExpandedIDs: 000000005ca600005ea6000060a6000062a6000064a6000066a6000068a600006aa600006ca600006ea60000
+    m_SelectedIDs: bc590100
+    m_LastClickedID: 88508
+    m_ExpandedIDs: 000000009c5901009e590100a0590100a2590100a4590100a6590100a8590100aa590100ac590100ae590100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005ca600005ea6000060a6000062a6000064a6000066a6000068a600006aa600006ca600006ea60000
+    m_ExpandedIDs: 000000009c5901009e590100a0590100a2590100a4590100a6590100a8590100aa590100ac590100ae590100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,22 +502,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000032480000644800009e9f0000d45000000cb10000b68c0c009499000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GameScene
-      m_OriginalName: GameScene
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 42526
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 76620100
-      m_LastClickedID: 90742
-      m_ExpandedIDs: 4805ffff8a5fffffc475ffff54fbffff00070100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 32f3faffb2f3faff6ef5faff82f6faffb2fdfaff32fefaffeefffaff0201fbff4461fbffa889ffffae89ffffde89fffff089ffff028affffb8e5ffff285a010056400200ae5902001e780200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -16.2, y: 7.01, z: -3.8599997}
+    m_Target: {x: -15.792532, y: 7.191067, z: -4.0706306}
     speed: 2
-    m_Value: {x: -16.199741, y: 7.0102005, z: -3.860119}
+    m_Value: {x: -15.792532, y: 7.191067, z: -4.0706306}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -672,11 +672,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0.087172285, y: -0.8995905, z: 0.21045253, w: 0.37262288}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 14.849234
+    m_Target: 7.30627
     speed: 2
-    m_Value: 14.209793
+    m_Value: 7.30627
   m_Ortho:
     m_Target: 0
     speed: 2
