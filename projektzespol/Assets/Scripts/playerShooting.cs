@@ -97,6 +97,10 @@ public class playerShooting : NetworkBehaviour
                 }
             }
         } 
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
     }
     [Command]
     public void CmdShoot()

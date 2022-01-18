@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\weaponSway.cs" />
      <Compile Include="Assets\Scripts\testing.cs" />
      <Compile Include="Assets\Scripts\attack_point.cs" />
+     <Compile Include="Assets\Scripts\die_msg.cs" />
      <Compile Include="Assets\Scripts\servers.cs" />
      <Compile Include="Assets\Scripts\test.cs" />
      <Compile Include="Assets\apply_name.cs" />
@@ -300,19 +301,19 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Rocks">
- <HintPath>C:/Users/konra/OneDrive/Pulpit/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+ <HintPath>C:/Users/konra/OneDrive/Documents/GitHub/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Pdb">
- <HintPath>C:/Users/konra/OneDrive/Pulpit/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+ <HintPath>C:/Users/konra/OneDrive/Documents/GitHub/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX">
- <HintPath>C:/Users/konra/OneDrive/Pulpit/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ <HintPath>C:/Users/konra/OneDrive/Documents/GitHub/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/konra/OneDrive/Pulpit/Spleeg/projektzespol/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/konra/OneDrive/Documents/GitHub/Spleeg/projektzespol/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Mdb">
- <HintPath>C:/Users/konra/OneDrive/Pulpit/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ <HintPath>C:/Users/konra/OneDrive/Documents/GitHub/Spleeg/projektzespol/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
