@@ -1724,4 +1724,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: "E:/Projekt/Projekt/projektzespol/build/projekt zespo\u0142owy.exe"
+  playerPath: "C:/Users/konra/OneDrive/Pulpit/projekt zespo\u0142owy.exe"

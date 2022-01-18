@@ -15,30 +15,30 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogColor: {r: 0.5411765, g: 0.9333334, b: 0.9176471, a: 1}
+  m_FogMode: 2
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientSkyColor: {r: 0.27889434, g: 0.87136734, b: 0.83879924, a: 1}
+  m_AmbientEquatorColor: {r: 0.016420439, g: 0.02354931, b: 0.028301895, a: 1}
+  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientIntensity: 0.7
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.54901963, g: 0.93725497, b: 0.9215687, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 33ab377b49aa14f6fae6e5bac230a5d4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37793598, g: 0.6875553, b: 0.8765884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -793,6 +793,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7082147231432309189, guid: 694c448a7c4f4cd45ac220d83c4c846e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.490002
+      objectReference: {fileID: 0}
     - target: {fileID: 8002415248172861105, guid: 694c448a7c4f4cd45ac220d83c4c846e, type: 3}
       propertyPath: m_Name
       value: Level1
@@ -840,6 +844,10 @@ PrefabInstance:
     - target: {fileID: 8002415248172861107, guid: 694c448a7c4f4cd45ac220d83c4c846e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290437589425496510, guid: 694c448a7c4f4cd45ac220d83c4c846e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.49
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8002415248172861106, guid: 694c448a7c4f4cd45ac220d83c4c846e, type: 3}
